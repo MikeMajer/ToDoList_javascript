@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("img/DSC048261.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+}
+
+form {
+    margin-top: 100px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.new,
+.reset {
+    width: 105px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: .5s;
+    margin-top: 10px;
+}
+
+.reset {
+    margin-left: 15px;
+}
+
+.new:hover,
+.reset:hover {
+    background-color: red;
+    box-shadow: 0 0 2px 1px black;
+}
+
+li {
+    margin: 10px 0px 10px 20px;
+}
+
+.fa-times-circle {
+    font-size: 17px;
+    transition: .3s;
+}
+
+.fa-times-circle:hover {
+    transform: rotate(90deg);
+}
+
+.delete {
+    margin-left: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+/* Search input */
+
+.search {
+    position: relative;
+    top: -80px;
+    left: 20px;
+    width: 234px;
+}
+
+.inputSearch {
+    position: absolute;
+    border-radius: 36px;
+    width: 50px;
+    height: 50px;
+    transition: .6s cubic-bezier(1, -0.3, 0, .99);
+    border: none;
+    background-color: transparent;
+    color: transparent;
+}
+
+::placeholder {
+    text-align: center;
+    font-family: sans-serif;
+    color: rgba(120, 120, 120, 0.3)
+}
+
+.active .inputSearch {
+    width: 100%;
+    padding-right: 50px;
+    padding-left: 25px;
+    border-radius: 36px;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+}
+
+.fa-search {
+    font-size: 25px;
+}
+
+.btnSearch {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    height: 100%;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    color: rgba(120, 120, 120, 0.5);
+    border: 3px solid rgba(120, 120, 120, 0.5);
+    transition: .6s cubic-bezier(1, -0.3, 0, .99), color .2s linear, border .2s linear;
+}
+
+
+.btnSearch:hover {
+    color: red;
+    border: 3px solid red;
+}
+
+.active .btnSearch {
+    transform: translateX(260px);
+    border: none;
+    color: rgba(120, 120, 120, 0.5);
+    background-color: transparent;
+}
+
+.active .btnSearch:hover {
+    color: red;
+}
+
+/* text input */
+
+.wrapper {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 280px;
+    margin-top: 60px;
+}
+
+.wrapper .label {
+    position: absolute;
+    top: 20px;
+    left: 101px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(70, 70, 70, 0.5);
+    transform-origin: 0 0;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.wrapper .border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: darkred;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: all .3s ease;
+}
+
+.wrapper input {
+    width: 100%;
+    border: none;
+    padding: 12px 0;
+    height: 48px;
+    font-size: 16px;
+    border-bottom: 2px solid rgba(70, 70, 70, 0.5);
+    background: none;
+    border-radius: 0;
+    font-family: arial, sans-serif;
+    color: black;
+    box-sizing: border-box;
+}
+
+.wrapper input:focus {
+    outline: none;
+}
+
+.wrapper input:focus+.label,
+.wrapper input:not(:placeholder-shown)+.label {
+    color: darkred;
+    top: -10px;
+    left: 0;
+    font-size: 15px;
+
+}
+
+.wrapper input:focus~.border {
+    transform: scaleX(1);
+}

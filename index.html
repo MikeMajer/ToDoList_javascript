@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <div class="search">
+        <input type="text" class="inputSearch" placeholder="Search">
+        <button class="btnSearch"><i class="fas fa-search"></i></button>
+    </div>
+    <form>
+        <h1>You have <span>0</span> tasks to do</h1>
+        <div class="wrapper">
+            <input id="input" class="add" type="text" placeholder="&nbsp;" autocomplete="off">
+            <label for="input" class="label">New Task</label for="go">
+            <span class="border"></span>
+        </div>
+        <button class="new">Add Task</button>
+        <button class="reset">Reset</button>
+    </form>
+
+    <ul></ul>
+    <script src="code.js"></script>
+</body>
+
+</html>
